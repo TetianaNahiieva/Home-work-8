@@ -1,0 +1,249 @@
+$color-white: #FFFFFF;
+$color-blue: #0c0e36;
+$color-red: #F70058;
+$color-gray: #8A8A9D ;
+$color-skyblue: skyblue;
+$color-black: #000000;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1;
+}
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+.container {    
+    max-width: 1048px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+    .header {
+        position: relative;
+        height: 83px;
+        padding-bottom: 31px;
+        padding-top: 31px;
+        font-family: 'Roboto', sans-serif;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__logo {
+            font-size: 18px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: $color-blue;
+            text-decoration: none;
+        }
+        &__menu {
+            padding-right: 302px;
+            & > ul {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                list-style: none;
+                & > li {
+                     &:not(:last-child) {
+                        margin-right: 60px;
+                    }
+                    & > a {
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: $color-blue;
+                    text-transform: uppercase;
+                    }
+                }
+            }
+        }
+        .weather {
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: flex;
+                min-height: 83px;
+            &__icon {
+                background-color: $color-red;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 75px;
+                & > i {
+                    width: 51px;
+                    height: 34px;
+                    background-image: url('../img/icon-weather.png');
+                }
+            }
+            &__info {
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+                background-color: $color-blue;
+                padding: 17px 13px 17px 10px;
+                padding-left: 2px;
+                & > li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding-left: 2px;
+                    &:not(:last-child) {
+                        padding-bottom: 10px;
+                        margin-bottom: 10px;
+                        border-bottom: 1px solid #8A8A9D ;
+                    }
+                & > span {
+                        font-size: 10px;
+                        font-weight: 900;
+                        color: $color-gray;
+                        text-transform: uppercase;
+                        letter-spacing: 0.075em;
+                        margin-right: 13px;
+                    }
+                    & > b {
+                        color: $color-white;
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+    .hero {        
+        background-image: url('../img/img.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: $color-skyblue;
+        background-size: cover;
+        .container {
+            min-height: calc(100vh - 83px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            & > h3 {
+                font-family: 'Work Sans', sans-serif;
+                font-size: 48px;
+                color: $color-black;
+                width: 538px;
+                height: 116px;
+                margin-bottom: 32px;
+            }
+            & > p {
+                font-family: 'Work Sans', sans-serif;
+                font-size: 18px;
+                color: $color-black;
+                width: 615px;
+                height: 117px;
+                margin-bottom: 66px;
+            }
+            .button-red {
+                background-color: $color-red;
+                width: 240px;
+                height: 49px;
+                color: $color-white;
+                font-size: 16px;
+                padding: 15px 27px;
+                font-family: 'Work Sans', sans-serif;
+                text-decoration: none;
+                margin-right: 25px;
+            }
+            .button-white {
+                background-color: $color-white;
+                width: 167px;
+                height: 49px;
+                color: $color-red;
+                font-size: 16px;
+                padding: 12px 27px;
+                font-family: 'Work Sans', sans-serif;
+                text-decoration: none;
+                border: 3px solid $color-red;
+            }
+            
+        }
+    }
+@media only screen and (max-width: 515px) {
+    .header {
+        min-height: 200px;
+        padding: 11px;
+        
+        .container {
+            display: block;
+        }
+        &__logo {
+            font-size: 18px;
+        }
+        &__menu {
+            padding-right: 0;
+            & > ul {
+               display: block;
+                flex-direction: column;
+                & > li {
+                    & > a {
+                        font-size: 16px;
+                        }
+                    &:not(:last-child) {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        .weather {
+            position: relative;                
+        }
+    }
+    .hero {   
+        background-size: 100% 100%; 
+        background-color: $color-white;
+        
+        .container {
+            display: block;
+            & > h3 {
+                font-size: 28px;
+                height: 56px;
+                margin: 12px;
+                width: 360px;
+            }
+            & > p {
+                font-size: 18px;
+                width: 360px;
+                height: 115px;
+                margin-bottom: 16px;
+            }
+            .button-red-white {
+                & > a {
+                    display: block;
+                    flex-direction: column;
+                    margin-bottom: 15px;
+                    .button-red {
+                        width: 140px;
+                        height: 49px;
+                        font-size: 16px;
+                        padding: 15px 27px;
+                        margin-right: 0;
+                        
+                    }
+                    .button-white {  
+                        width: 67px;
+                        height: 49px;   
+                        font-size: 16px;
+                        padding: 12px 27px;
+                        
+                    }
+                    
+                }
+                
+                
+            }
+        }
+        
+    }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,292 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.container {
+  max-width: 1048px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  position: relative;
+  height: 83px;
+  padding-bottom: 31px;
+  padding-top: 31px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo {
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #0c0e36;
+  text-decoration: none;
+}
+
+.header__menu {
+  padding-right: 302px;
+}
+
+.header__menu > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.header__menu > ul > li:not(:last-child) {
+  margin-right: 60px;
+}
+
+.header__menu > ul > li > a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0c0e36;
+  text-transform: uppercase;
+}
+
+.header .weather {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 83px;
+}
+
+.header .weather__icon {
+  background-color: #F70058;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 75px;
+}
+
+.header .weather__icon > i {
+  width: 51px;
+  height: 34px;
+  background-image: url("../img/icon-weather.png");
+}
+
+.header .weather__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+  background-color: #0c0e36;
+  padding: 17px 13px 17px 10px;
+  padding-left: 2px;
+}
+
+.header .weather__info > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 2px;
+}
+
+.header .weather__info > li:not(:last-child) {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #8A8A9D;
+}
+
+.header .weather__info > li > span {
+  font-size: 10px;
+  font-weight: 900;
+  color: #8A8A9D;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  margin-right: 13px;
+}
+
+.header .weather__info > li > b {
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.hero {
+  background-image: url("../img/img.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: skyblue;
+  background-size: cover;
+}
+
+.hero .container {
+  min-height: calc(100vh - 83px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.hero .container > h3 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 48px;
+  color: #000000;
+  width: 538px;
+  height: 116px;
+  margin-bottom: 32px;
+}
+
+.hero .container > p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  color: #000000;
+  width: 615px;
+  height: 117px;
+  margin-bottom: 66px;
+}
+
+.hero .container .button-red {
+  background-color: #F70058;
+  width: 240px;
+  height: 49px;
+  color: #FFFFFF;
+  font-size: 16px;
+  padding: 15px 27px;
+  font-family: 'Work Sans', sans-serif;
+  text-decoration: none;
+  margin-right: 25px;
+}
+
+.hero .container .button-white {
+  background-color: #FFFFFF;
+  width: 167px;
+  height: 49px;
+  color: #F70058;
+  font-size: 16px;
+  padding: 12px 27px;
+  font-family: 'Work Sans', sans-serif;
+  text-decoration: none;
+  border: 3px solid #F70058;
+}
+
+@media only screen and (max-width: 515px) {
+  .header {
+    min-height: 200px;
+    padding: 11px;
+  }
+  .header .container {
+    display: block;
+  }
+  .header__logo {
+    font-size: 18px;
+  }
+  .header__menu {
+    padding-right: 0;
+  }
+  .header__menu > ul {
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header__menu > ul > li > a {
+    font-size: 16px;
+  }
+  .header__menu > ul > li:not(:last-child) {
+    margin-right: 0;
+  }
+  .header .weather {
+    position: relative;
+  }
+  .hero {
+    background-size: 100% 100%;
+    background-color: #FFFFFF;
+  }
+  .hero .container {
+    display: block;
+  }
+  .hero .container > h3 {
+    font-size: 28px;
+    height: 56px;
+    margin: 12px;
+    width: 360px;
+  }
+  .hero .container > p {
+    font-size: 18px;
+    width: 360px;
+    height: 115px;
+    margin-bottom: 16px;
+  }
+  .hero .container .button-red-white > a {
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 15px;
+  }
+  .hero .container .button-red-white > a .button-red {
+    width: 140px;
+    height: 49px;
+    font-size: 16px;
+    padding: 15px 27px;
+    margin-right: 0;
+  }
+  .hero .container .button-red-white > a .button-white {
+    width: 67px;
+    height: 49px;
+    font-size: 16px;
+    padding: 12px 27px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
